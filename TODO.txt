@@ -1,0 +1,9 @@
+- Flake configuration
+	- Examples: 
+		- https://github.com/erictossell/nixflakes : flake configuration; includes virtualisation/kvm
+
+	- vscode
+	- nvim
+	- set up virtual shell for projects
+	- steam games
+	- virtual machines
