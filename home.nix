@@ -93,6 +93,10 @@ in
     plugins = with pkgs.vimPlugins; [
       vim-sleuth
     ];
+    defaultEditor = true;
+    extraConfig = ''
+      inoremap jj <Esc>
+    '';
   };
 
   programs.vscode = {
