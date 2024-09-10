@@ -2,7 +2,8 @@
 
 {
   home.packages = with pkgs; [
-    ghc
+    ghc 
+    haskell-language-server
   ];
 }
 
