@@ -95,7 +95,17 @@ in
     vimAlias = true;
     plugins = with pkgs.vimPlugins; [
       vim-sleuth
+      mason-nvim
+      nvim-lspconfig 
     ];
+    defaultEditor = true;
+    extraConfig = ''
+      inoremap jj <Esc>
+      lua << EOF
+      require("mason").setup()
+      require'lspconfig'.hls.setup{}
+      EOF
+    '';
   };
 
   programs.vscode = {
