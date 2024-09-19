@@ -13,6 +13,8 @@
     configFile = ./config/qtile/config.py;
   }; 
 
+  virtualisation.docker.enable = true;
+
   programs.git = {
     enable = true;
     config = {

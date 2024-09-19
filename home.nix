@@ -9,6 +9,11 @@ in
     ./Shell/zsh.nix
   ];
   
+  services.polybar = {
+    enable = true;
+    script = "polybar";
+  };
+
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "mugen";
@@ -39,6 +44,7 @@ in
     kdePackages.okular
     pdfarranger
     libsForQt5.dolphin
+    btop
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
