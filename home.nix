@@ -128,9 +128,11 @@ in
     enable = true;
     userEmail= "${userEmail}";
     userName = "${name}";
-    init = {
-      defaultBranch = "main"
-    }
+    extraConfig = {
+      init = {
+        defaultBranch = "main";
+      };
+    };
   };
 
   # Let Home Manager install and manage itself.
