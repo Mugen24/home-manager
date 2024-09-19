@@ -31,6 +31,7 @@
           ./home.nix 
           ./Programing/web_development.nix
           ./Programing/haskell.nix
+          ./Programing/uni.nix
         ];
 
         # Optionally use extraSpecialArgs

@@ -36,7 +36,6 @@ in
     curl
     python3
     gparted
-    chromium
     kdePackages.okular
     pdfarranger
     libsForQt5.dolphin
