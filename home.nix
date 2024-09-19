@@ -11,7 +11,7 @@ in
   
   services.polybar = {
     enable = true;
-    script = "polybar";
+    script = "polybar &";
     config = /home/mugen/.config/home-manager/config/polybar/config.ini;
   };
 
