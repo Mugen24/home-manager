@@ -7,3 +7,4 @@
 	- set up virtual shell for projects
 	- steam games
 	- virtual machines
+	- somehow make configuration.nix and home-manager.nix configurable in one place

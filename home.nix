@@ -39,6 +39,7 @@ in
     chromium
     kdePackages.okular
     pdfarranger
+    libsForQt5.dolphin
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
@@ -101,6 +102,12 @@ in
     defaultEditor = true;
     extraConfig = ''
       inoremap jj <Esc>
+      syntax on " Syntax highlighting
+      set showmatch " Shows matching brackets
+      set ruler " Always shows location in file (line#)
+      set smarttab " Autotabs for certain code
+      set shiftwidth=4
+      set tabstop=4
       lua << EOF
       require("mason").setup()
       require'lspconfig'.hls.setup{}
