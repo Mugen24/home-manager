@@ -1,6 +1,6 @@
 {
   pkgs, config, ...
-}
+}:
 {
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   # Autocompletion for systemd in zsh
@@ -10,7 +10,7 @@
   users.defaultUserShell = pkgs.zsh;
 
   services.xserver.windowManager.qtile = {
-    config = "./config/qtile/config.py";
+    configFile = ./config/qtile/config.py;
   }; 
 
   programs.git = {
