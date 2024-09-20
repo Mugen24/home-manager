@@ -9,6 +9,8 @@ in
     ./Shell/zsh.nix
   ];
   
+
+
   services.polybar = {
     enable = true;
     script = "polybar &";
