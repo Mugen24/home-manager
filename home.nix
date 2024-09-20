@@ -11,6 +11,9 @@ in
   
 
 
+  systemd.user.services.polybar = {
+    Install.WantedBy = [ "graphical-session.target" ];
+  };
   services.polybar = {
     enable = true;
     script = "polybar &";
