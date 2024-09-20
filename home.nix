@@ -9,6 +9,17 @@ in
     ./Shell/zsh.nix
   ];
   
+
+
+  systemd.user.services.polybar = {
+    Install.WantedBy = [ "graphical-session.target" ];
+  };
+  services.polybar = {
+    enable = true;
+    script = "polybar &";
+    config = /home/mugen/.config/home-manager/config/polybar/config.ini;
+  };
+
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "mugen";
@@ -36,10 +47,10 @@ in
     curl
     python3
     gparted
-    chromium
     kdePackages.okular
     pdfarranger
     libsForQt5.dolphin
+    btop
 
     # screenshot
     ksnip
