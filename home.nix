@@ -51,6 +51,10 @@ in
     pdfarranger
     libsForQt5.dolphin
     btop
+    onlyoffice-bin
+    libreoffice-qt6-fresh
+    vlc
+    gpick
 
     # screenshot
     ksnip
