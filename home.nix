@@ -54,6 +54,7 @@ in
     brightnessctl
     networkmanagerapplet
     vlc
+    obsidian
 
     # screenshot
     ksnip

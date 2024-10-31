@@ -5,6 +5,7 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   # Autocompletion for systemd in zsh
   programs.zsh.enable = true;
+  programs.nix-ld.enable = true;
   environment.shells = with pkgs; [ zsh ];
   environment.pathsToLink = [ "/share/zsh" ];
   users.defaultUserShell = pkgs.zsh;
