@@ -55,6 +55,8 @@ in
     libreoffice-qt6-fresh
     vlc
     gpick
+    brightnessctl
+
 
     # screenshot
     ksnip
