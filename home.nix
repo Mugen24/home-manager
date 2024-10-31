@@ -19,6 +19,14 @@ in
   #   script = "polybar &";
   #   config = /home/mugen/.config/home-manager/config/polybar/config.ini;
   # };
+  # systemd.user.services.polybar = {
+  #   Install.WantedBy = [ "graphical-session.target" ];
+  # };
+  # services.polybar = {
+  #   enable = true;
+  #   script = "polybar &";
+  #   config = /home/mugen/.config/home-manager/config/polybar/config.ini;
+  # };
 
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -51,9 +59,11 @@ in
     pdfarranger
     libsForQt5.dolphin
     btop
-    brightnessctl
-    networkmanagerapplet
+    onlyoffice-bin
+    libreoffice-qt6-fresh
     vlc
+    gpick
+    networkmanagerapplet
     obsidian
 
     # screenshot
