@@ -56,6 +56,7 @@ in
     vlc
     gpick
     brightnessctl
+    chromium
 
 
     # screenshot
