@@ -33,6 +33,7 @@
           ./Programing/haskell.nix
           ./Programing/uni.nix
           ./Programing/database.nix
+          ./Other/photoshop.nix
         ];
 
         # Optionally use extraSpecialArgs
