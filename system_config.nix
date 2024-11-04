@@ -2,6 +2,11 @@
   pkgs, config, ...
 }:
 {
+
+  hardware.opengl.extraPackages = with pkgs; [
+    rocmPackages.clr.icd
+  ];
+
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   # Autocompletion for systemd in zsh
   programs.zsh.enable = true;
@@ -36,6 +41,7 @@
     xorg.xinit
     ntfs3g
     pavucontrol
+    clinfo
   ];
 
   # Install firefox.

@@ -59,6 +59,8 @@ in
     chromium
 
 
+    #Photo viewer
+    digikam
     # screenshot
     ksnip
 
