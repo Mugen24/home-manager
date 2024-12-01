@@ -39,7 +39,6 @@ in
   home.packages = with pkgs; [
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
-    firefox
     rofi
     arandr
     kitty
@@ -57,7 +56,8 @@ in
     gpick
     brightnessctl
     chromium
-
+    captive-browser
+    bottles
 
     #Photo viewer
     digikam
@@ -158,6 +158,23 @@ in
     };
   };
 
+
+  programs.firefox = {
+    enable = true;
+#    profiles = {
+#      default = {
+#        id = 0;
+#        name = "default";
+#        isDefault = true;
+#        userContent = '' 
+#          #viewerContainer > #viewer > .page > .canvasWrapper > canvas { 
+#            filter: grayscale(100%);
+#            filter: invert(100%);
+#          } 
+#        '';
+#      };
+#    };
+  };
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 }

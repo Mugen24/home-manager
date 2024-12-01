@@ -33,6 +33,7 @@
           ./Programing/haskell.nix
           ./Programing/uni.nix
           ./Programing/database.nix
+          ./Programing/AI.nix
           ./Other/photoshop.nix
         ];
 
