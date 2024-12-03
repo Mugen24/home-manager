@@ -34,6 +34,7 @@
           ./Programing/uni.nix
           ./Programing/database.nix
           ./Other/photoshop.nix
+          ./Programing/python.nix
         ];
 
         # Optionally use extraSpecialArgs
