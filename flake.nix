@@ -20,8 +20,8 @@
         config.allowUnfree = true;
         config.allowBroken = true;
       };
-    in {
 
+    in {
       homeConfigurations."mugen" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
 
@@ -29,7 +29,7 @@
         # the path to your home.nix.
         modules = [ 
           ./home.nix 
-          ./Programing/web_development.nix
+          ./Programing/web_development/configuration.nix
           ./Programing/haskell.nix
           ./Programing/uni.nix
           ./Programing/database.nix
