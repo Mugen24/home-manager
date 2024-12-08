@@ -35,6 +35,7 @@
           ./Programing/database.nix
           ./Other/photoshop.nix
           ./Programing/python.nix
+          ./Programing/Editor/nvim.nix
         ];
 
         # Optionally use extraSpecialArgs
