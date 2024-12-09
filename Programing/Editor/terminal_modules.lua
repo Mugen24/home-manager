@@ -3,6 +3,7 @@ local window_h = vim.fn.winheight("0") / 3
 local terminals = {}
 local curr_term = nil
 
+-- To delete buffer use bdelete buff_name/number
 -- TODO: rework this into an event listener
 local toggle = false
 
@@ -108,14 +109,27 @@ local conf = require("telescope.config").values
 local actions = require "telescope.actions"
 local action_state = require "telescope.actions.state"
 
+local bufferPreviewer = previewers.new_buffer_previewer({
+    define_preview = function(self, entry, status)
+      local buf_handle = vim.fn.bufnr(entry[1])
+      local content = vim.api.nvim_buf_get_lines(buf_handle, -50, -1, false)
+      vim.api.nvim_buf_set_lines(self.state.bufnr, 0, 50, false, content)
+      --local last_line = vim.fn.line("$")
+      --vim.api.nvim_win_set_cursor(win_handler[1], {60, 100})
+    end
+})
+
 local bufferPicker = function(opts)
     opts = opts or {}
+    opts.sorting_strategy = "descending"
+
     pickers.new(opts, {
         prompt_title = "Terminals",
         finder = finders.new_table({
             results = terminals
         }),
-        sorters = conf.generic_sorter(opts),
+        sorter = conf.generic_sorter(opts),
+        previewer = bufferPreviewer,
         attach_mappings = function(prompt_bufnr, map)
           actions.select_default:replace(function()
             actions.close(prompt_bufnr)
