@@ -38,7 +38,7 @@ vim.keymap.set("t", "<c-t>", function ()
     vim.cmd.startinsert()
 end)
 
-vim.keymap.set("t", "<c-w>", function()
+vim.keymap.set("t", "<c-x>", function()
     -- NOTE passing 0 doesn't work 
     local deletedBuf = vim.fn.bufname("%")
     local bufHandle = vim.fn.bufnr(deletedBuf)

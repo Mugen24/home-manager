@@ -1,6 +1,7 @@
-{}:
+{ username, pkgs, ... }:
 {
     imports = [
-        "./Komga.nix"
+        (import ./Komga.nix { username = username; pkgs = pkgs;})
+        (import ./Calibre.nix { username = username; pkgs = pkgs;})
     ];
 }

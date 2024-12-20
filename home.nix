@@ -58,6 +58,9 @@ in
     kdePackages.okular
     pdfarranger
     libsForQt5.dolphin
+    cinnamon.nemo
+    cinnamon.nemo-fileroller
+
     btop
     onlyoffice-bin
     libreoffice-qt6-fresh

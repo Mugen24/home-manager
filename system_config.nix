@@ -1,7 +1,14 @@
 {
   pkgs, config, ...
 }:
+
+let 
+  username = "mugen";
+in
 {
+  imports = [
+    (import ./system_modules/Readings/default.nix { username = username; pkgs = pkgs; })
+  ];
 
   hardware.opengl.extraPackages = with pkgs; [
     rocmPackages.clr.icd

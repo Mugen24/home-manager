@@ -256,8 +256,27 @@
           end
           '';
       }
+
+      {
+        plugin = nvim-web-devicons;
+        type = "lua";
+        config = ''
+        '';
+      }
+
+      {
+        plugin = nvim-tree-lua;
+        type = "lua";
+        config = ''
+          require("nvim-tree").setup()
+          local nvim_tree = require("nvim-tree.api")
+          vim.keymap.set("n", "<leader>z", nvim_tree.tree.toggle)
+        '';
+      }
+
     ];
 
+    
     extraPackages = [
       pkgs.gcc 
       pkgs.curl
